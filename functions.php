@@ -187,15 +187,9 @@ require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-functions.php';
 
 add_theme_support( 'custom-header' );
 
-// Add custom text before the checkout form
-add_action('woocommerce_before_checkout_form', 'add_custom_text_before_checkout');
-function add_custom_text_before_checkout() {
-    echo '<p style="color: #333; font-size: 16px;">Thank you for shopping with us! Please review your details before proceeding.</p>';
-}
-
-// Add custom text after the checkout form
-add_action('woocommerce_after_checkout_form', 'add_custom_text_after_checkout');
-function add_custom_text_after_checkout() {
-    echo '<p style="color: #333; font-size: 16px;">If you have any questions, feel free to contact our support team!</p>';
+// Add custom text to the WooCommerce cart page
+add_action('woocommerce_before_cart', 'custom_text_on_cart_page');
+function custom_text_on_cart_page() {
+    echo '<p style="color: blue; font-size: 16px;">Thank you for reviewing your cart! Please proceed to checkout when ready.</p>';
 }
 ?>
