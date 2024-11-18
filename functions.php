@@ -198,3 +198,4 @@ add_action('woocommerce_after_checkout_form', 'add_custom_text_after_checkout');
 function add_custom_text_after_checkout() {
     echo '<p style="color: #333; font-size: 16px;">If you have any questions, feel free to contact our support team!</p>';
 }
+?>
