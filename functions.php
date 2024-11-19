@@ -184,12 +184,4 @@ require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-filters.php';
 require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-hooks.php';
 require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-functions.php';
 
-
-add_theme_support( 'custom-header' );
-
-// Add custom text to the WooCommerce cart page
-add_action('woocommerce_before_cart', 'custom_text_on_cart_page');
-function custom_text_on_cart_page() {
-    echo '<p style="color: blue; font-size: 16px;">Thank you for reviewing your cart! Please proceed to checkout when ready.</p>';
-}
 ?>
